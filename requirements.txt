@@ -1,0 +1,9 @@
+pymssql
+requests
+pandas
+googlemaps
+azure-storage-blob
+openai
+scikit-learn
+nbconvert
+ipykernel
