@@ -1,59 +1,79 @@
-# 🌍 RentScape 🌍
+# 🌍 RentScape Project Repository 🌍
 
-This repository contains the codebase for the **RentScape** project, a data-powered visualization application that integrates diverse datasets into an Azure-based storage solution. The project focuses on Airbnb listings in the cities of **Prague** and **Barcelona**.
+This repository contains the codebase for **RentScape**, a data-powered visualization application that integrates diverse datasets into an Azure-based storage solution. The project focuses on Airbnb listings in the cities of **Prague** and **Barcelona**.
 
 ## 🚀 Repository Structure 🚀
 
-The repository is organized to reflect the contributions of individual team members. Each team member is responsible for a specific portion of the project, and their work is contained within folders named after them.
+The repository is divided into two main folders representing the two primary stages of the project:
 
-### 📂 Team Member Folders 📂
+### 📂 Folder: `dl_datalake/`
+This folder contains all the Jupyter notebooks related to the **Data Lake** phase of the project. The files are organized in the correct execution order, with numbered prefixes for clarity. Each notebook corresponds to the extraction of data from a specific source or transformation steps required to prepare the data for the next phase.
 
-- **`daniel/`**
-- **`rodrigo/`**
-- **`victor/`**
+#### Contents:
+1. **`01_dl__extract___insideairbnb.ipynb`**: Extracts data from the InsideAirbnb dataset.
+2. **`02_dl__extract___currency_nbp_api.ipynb`**: Fetches currency exchange data from the National Bank of Poland API.
+3. **`03_dl__extract___open_ai.ipynb`**: Retrieves data via the OpenAI API.
+4. **`04_dl__extract___overpass_api.ipynb`**: Extracts data using the Overpass API from OpenStreetMap.
 
-Each folder includes the following subfolders:
+---
 
-1. **`dl_datalake/`**:
-   - Contains code related to data extraction, transformation, and storage in the Azure-based data lake.
-   - Files within this folder are named to indicate:
-     - **The dataset they relate to.**
-     - **The stage of the pipeline they correspond to.**
+### 📂 Folder: `dwh_datawarehouse/`
+This folder contains all the Jupyter notebooks related to the **Data Warehouse** phase of the project. Similar to the Data Lake phase, the files are organized in the order they should be executed and correspond to different transformations, loads, and queries in the Data Warehouse.
 
-     For example:
-     - `dl__extract___currency_nbp_api.ipynb`: Extracts currency exchange data from the National Bank of Poland API.
-     - `dl__extract___inside_airbnb.ipynb`: Extracts Airbnb listing data from the Inside Airbnb dataset.
+#### Contents:
+1. **`01_dwh__extract___insideairbnb.ipynb`**: Transformation for the InsideAirbnb dataset.
+2. **`02_dwh__transform___currency_nbp.ipynb`**: Transformation of currency data for the warehouse.
+3. **`03_dwh__transform___open_ai.ipynb`**: Transformation of OpenAI data for the warehouse.
+4. **`04_dwh__transform___overpass_api.ipynb`**: Transformation for the Overpass API.
+5. **`05_dwh__load___all_files_to_azure_sql.ipynb`**: Loads transformed data into the Azure SQL database.
 
-2. **`dwh_datawarehouse/`**:
-   - Contains code responsible for the data warehouse layer. This is where transformed and processed data is stored for efficient querying and analysis.
+---
 
-### 🗂 Example Folder Breakdown 🗂
+### 🧑‍💻 Author Contributions 🧑‍💻
 
-#### `daniel/`
-- **`dl_datalake/`**:
-  - `dl__extract___currency_nbp_api.ipynb`
-  - `dl__extract___inside_airbnb.ipynb`
-- **`dwh_datawarehouse/`**:
-  - Code for structuring and querying the data warehouse.
+All team members contributed to both the **Data Lake** and **Data Warehouse** phases. The specific responsibilities for each data source and transformation are:
 
-The structure is mirrored in the folders for **Rodrigo** and **Victor**, with each team member focusing on specific datasets and project stages.
+- **Daniel**:
+  - InsideAirbnb dataset: Extraction and transformation.
+  - Currency data from NBP API: Extraction and transformation.
+
+- **Rodrigo**:
+  - OpenAI API: Extraction and transformation.
+
+- **Victor**:
+  - Overpass API (OpenStreetMap): Extraction, transformation, and loading into Azure SQL database.
+
+---
+
+## 🔑 Security 🔑
+
+To ensure security and protect sensitive information, all keys, tokens, and credentials have been removed from the codebase. Make sure to set the appropriate environment variables or use secure vault services when running the code.
+
+---
 
 ## 🌟 Project Purpose 🌟
 
-The **RentScape Project** combines and integrates multiple data sources into a centralized Azure-based architecture. The application enables dynamic, data-driven insights into Airbnb rental trends for **Prague** and **Barcelona** through interactive visualizations.
+The **RentScape** project combines and integrates multiple data sources into a centralized Azure-based architecture. The application enables dynamic, data-driven insights into Airbnb rental trends for **Prague** and **Barcelona** through interactive visualizations.
 
 ### 🔑 Key Components 🔑
 
 1. **Azure Storage**:
-   - Data Lake: Stores raw and pre-processed data.
-   - Data Warehouse: Optimized for querying and analytics.
+   - **Data Lake**: Stores raw and pre-processed data.
+   - **Data Warehouse**: Optimized for querying and analytics.
 
 2. **Datasets**:
-   - **Currency Exchange Data**: Retrieved from the National Bank of Poland API.
-   - **Airbnb Listings**: Extracted from the Inside Airbnb dataset.
+   - **Dynamic APIs**:
+     - Currency Data (NBP API)
+     - OpenAI Data
+     - Overpass API (OpenStreetMap)
+   - **Static Sources**:
+     - InsideAirbnb Dataset.
 
 3. **Visualization Application**:
-   - Powered by interactive dashboards that allow users to explore rental trends, pricing patterns, and more.
+   - Built in **Power BI**.
+   - Access the **[online version](https://app.powerbi.com/view?r=eyJrIjoiNWU1MDMwZWMtZjljOS00NTY2LWExOWEtZWFmOGEzNzk1N2VkIiwidCI6IjZhMmE2NjZjLTQ2MzktNDYzYS04ZTNhLTIxMjczZTVkOTAyOCJ9)** to explore dynamic dashboards and gain insights.
+
+---
 
 ## 🛠 How to Use 🛠
 
