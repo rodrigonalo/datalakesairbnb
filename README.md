@@ -1,6 +1,6 @@
-# 🌍 RentScape Project Repository 🌍
+# 🌍 RentScape 🌍
 
-This repository contains the codebase for the **RentScape Project**, a data-powered visualization application that integrates diverse datasets into an Azure-based storage solution. The project focuses on Airbnb listings in the cities of **Prague** and **Barcelona**.
+This repository contains the codebase for the **RentScape** project, a data-powered visualization application that integrates diverse datasets into an Azure-based storage solution. The project focuses on Airbnb listings in the cities of **Prague** and **Barcelona**.
 
 ## 🚀 Repository Structure 🚀
 
