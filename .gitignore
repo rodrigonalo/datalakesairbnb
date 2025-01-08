@@ -1,3 +1,4 @@
 data/
 venv/
 open_jupyter.bat
+.env
