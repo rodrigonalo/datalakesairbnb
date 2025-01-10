@@ -41,7 +41,8 @@ All team members contributed to both the **Data Lake** and **Data Warehouse** ph
   - OpenAI API: Extraction and transformation.
 
 - **Victor**:
-  - Overpass API (OpenStreetMap): Extraction, transformation, and loading into Azure SQL database.
+  - Overpass API (OpenStreetMap): Extraction and transformation.
+  - Loading of cleansed data to Azure SQL database.
 
 ---
 
